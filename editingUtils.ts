@@ -83,8 +83,10 @@ var EditingUtil= class EditingUtil{
            var mxObj=mxMf.objectCollection.objects.filter((mfObj:microflows.MicroflowObject)=>(
                 mfObj.id===nodeId                
            ))[0];
-           mxObj.relativeMiddlePoint= {x: Math.round(g.node(nodeId).x), y: Math.round(g.node(nodeId).y)};
-        });
+           if (g.node(nodeId)&&g.node(nodeId).x!==undefined&&g.node(nodeId).y!==undefined){
+                mxObj.relativeMiddlePoint= {x: Math.round(g.node(nodeId).x), y: Math.round(g.node(nodeId).y)};
+           }
+           });
     }
     commitToServer():void{
         //this._workingCopy.commit()
