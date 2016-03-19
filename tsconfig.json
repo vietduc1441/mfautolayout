@@ -1,0 +1,13 @@
+{
+"compilerOptions" : {
+"module" : "commonjs",
+"target" : "es5"
+},
+"files" : [
+"microflowUtils.ts",
+"editingUtils.ts",
+"config.ts",
+"interfaces.ts",
+"autolayout.ts"
+]
+}
