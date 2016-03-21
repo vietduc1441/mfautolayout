@@ -8,6 +8,7 @@
 "editingUtils.ts",
 "config.ts",
 "interfaces.ts",
-"autolayout.ts"
+"bin/autolayout.ts",
+"main.ts"
 ]
 }
