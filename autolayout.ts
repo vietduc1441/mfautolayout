@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /// reference <path="./typings/tsd.d.ts">;
 import EditingUtils=require("./editingUtils");
 import project=require("./config");
