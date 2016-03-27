@@ -1,6 +1,6 @@
 {
   "name": "mfautolayout",
-  "version": "1.1.1",
+  "version": "1.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "bin":{
-    "play":"bin/autolayout.js"  
+    "autolayout":"bin/autolayout.js"  
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "lokijs": "^1.3.16",
     "mendixmodelsdk": "^2.0.0",
     "mendixplatformsdk": "^2.0.0",
+    "liftoff":"^2.1.0",
     "when": "^3.7.5"
   }
 }
