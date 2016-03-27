@@ -32,7 +32,10 @@ var EditingUtil= class EditingUtil{
             .then(mfs=>microflowUtils.loadAllMicroflows(mfs))
             .then((mxMfs)=>{
                 this._isLoaded=true;
-                this._mxMicroflows=mxMfs;
+                this._mxMicroflows=mxMfs.filter((mf:microflows.Microflow)=>{
+                    var moduleName=mf.qualifiedName.split(".")[0]
+                    return ["System", "Administration", "NavigationLayouts"].indexOf(moduleName)===-1;
+                });
             })
             .then(()=>(resolve(this._mxMicroflows)));
         });        
