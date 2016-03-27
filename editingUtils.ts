@@ -60,7 +60,7 @@ var EditingUtil= class EditingUtil{
         }
     }
     autolayoutModules(moduleNames:string[]){
-        moduleNames.forEach(this.autolayoutModule);
+        moduleNames.forEach(this.autolayoutModule.bind(this));
     }
     autolayoutModule(moduleName:string){
         var mxMfsInModule=microflowUtils.findMxMicroflowsInModule(moduleName,this._mxMicroflows);

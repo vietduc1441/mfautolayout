@@ -57,7 +57,7 @@ var EditingUtil = (function () {
         }
     };
     EditingUtil.prototype.autolayoutModules = function (moduleNames) {
-        moduleNames.forEach(this.autolayoutModule);
+        moduleNames.forEach(this.autolayoutModule.bind(this));
     };
     EditingUtil.prototype.autolayoutModule = function (moduleName) {
         var mxMfsInModule = microflowUtils.findMxMicroflowsInModule(moduleName, this._mxMicroflows);
