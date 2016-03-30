@@ -28,7 +28,10 @@ var EditingUtil = (function () {
                 .then(function (mfs) { return microflowUtils.loadAllMicroflows(mfs); })
                 .then(function (mxMfs) {
                 _this._isLoaded = true;
-                _this._mxMicroflows = mxMfs;
+                _this._mxMicroflows = mxMfs.filter(function (mf) {
+                    var moduleName = mf.qualifiedName.split(".")[0];
+                    return ["System", "Administration", "NavigationLayouts"].indexOf(moduleName) === -1;
+                });
             })
                 .then(function () { return (resolve(_this._mxMicroflows)); });
         });
