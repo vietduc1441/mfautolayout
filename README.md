@@ -7,7 +7,7 @@ Your microflows, sometimes, look quite messy. This module is to help you to rear
 1. Install mfautolayout-cli
 
 ```
-npm intall mfautolayout-cli -g
+npm install mfautolayout-cli -g
 ```
 
 2. Install mfautolayout
